@@ -1,0 +1,6 @@
+Abra a pasta 'Arquivos' no CMD;
+Em seguida, escreva este comando:
+
+run.py runserver
+
+Após isso, o programa pode ser utilizado no navegador, enquanto o CMD estiver aberto.
