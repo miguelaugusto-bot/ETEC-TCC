@@ -24,7 +24,7 @@ $( document ).ready(function() {
   // setTimeout serve para carregar primeiro as imagens
   setTimeout(function() {
     $('#data-area').parallax({imageSrc: 'img/cidadeparallax.png'});
-    $('#apply-area').parallax({imageSrc: '../app/lib/img/game/pattern.png'});
+    $('#apply-area').parallax({imageSrc: 'app/lib/img/game/pattern.png'});
   }, 200);
 
   // Filtro portfólio
