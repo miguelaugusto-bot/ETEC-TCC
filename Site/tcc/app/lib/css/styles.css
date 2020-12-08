@@ -3,6 +3,7 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+
 .row {
   margin: 0;
 }
@@ -143,10 +144,6 @@ header, .navbar {
   color: #65DAF9;
   margin-right: 15px;
 }
-
-
-
-
 
 /* Nosso Time */
 
@@ -357,6 +354,7 @@ header, .navbar {
 
 /* responsive */
 @media(max-width: 768px) {
+	
   
   /* geral */
   .container {
@@ -433,6 +431,9 @@ header, .navbar {
     font-size: 16px;
   }
 
+  #company-img {
+    display: none;
+  }
 }
 
 
@@ -527,11 +528,10 @@ header, .navbar {
     border: none;
     margin-bottom: 0;
   }
-#footer {
-	width: 100%;
-	position: absolute;
-	bottom: 0;
-}
+
+
+ 
+
 
 }
 
