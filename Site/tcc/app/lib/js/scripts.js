@@ -65,7 +65,7 @@ $( document ).ready(function() {
   }
 
   // scroll para as seções
-
+/*
   let navBtn = $('.nav-item');
 
   let bannerSection = $('#mainSlider');
@@ -102,5 +102,5 @@ $( document ).ready(function() {
         scrollTop: $(scrollTo).offset().top - 70
     }, 1500);
   });
-
+*/
 });

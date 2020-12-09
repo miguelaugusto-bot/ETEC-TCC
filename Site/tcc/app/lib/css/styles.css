@@ -353,9 +353,18 @@ header, .navbar {
 }
 
 /* responsive */
-@media(max-width: 768px) {
-	
+@media(max-width: 960px) {
   
+  /* desativar o botão da navbar*/
+  .game{
+    display: none;
+  }
+
+  /*desativar o botão rank*/
+   .rank{
+    visibility: hidden;
+   }
+
   /* geral */
   .container {
     padding: 20px 0;
@@ -438,6 +447,16 @@ header, .navbar {
 
 
 @media(max-width: 425px) {
+
+  /* desativar o botão da navbar*/
+  .game{
+    display: none;
+  }
+
+  /*desativar o botão rank*/
+   .rank{
+    visibility: hidden;
+   }
 
   /* slider */
   #mainSlider {
@@ -528,10 +547,6 @@ header, .navbar {
     border: none;
     margin-bottom: 0;
   }
-
-
- 
-
 
 }
 
