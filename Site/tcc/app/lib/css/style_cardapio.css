@@ -1,0 +1,255 @@
+/* Gerais */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Barra de navegação */
+header, .navbar {
+  background-color: #bf40bf;
+}
+
+#nav-container {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+#logo {
+  width: 75px;
+}
+
+.navbar-brand {
+  padding: 0;
+  color: #FFF;
+}
+
+.navbar-brand:hover {
+  color: #FFF;
+}
+
+#navbar-links a {
+  color: #FFF;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding: 1rem .8rem;
+}
+
+.nav-item.active {
+  border-bottom: 3px solid #FFF;
+}
+
+/* Footer */
+
+#contact-area {
+  text-align: center;
+}
+
+.contact-box {
+  padding-bottom: 50px;
+  margin-bottom: 50px;
+  border-bottom: 1px solid #3EC1D5;
+}
+
+.contact-box i {
+  color: #444;
+  border: solid 1px #444;
+  border-radius: 50%;
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.contact-box p {
+  font-size: 16px;
+}
+
+.contact-tile {
+  font-weight: bold;
+  color: #3EC1D5;
+}
+
+#msg-box p {
+  font-size: 22px;
+}
+
+#contact-form input[type="text"], #contact-form textarea {
+  margin-bottom: 15px;
+  border-radius: 0;
+}
+
+#contact-form .main-btn {
+  width: 120px;
+  height: 50px;
+}
+
+#contact-form .main-btn:hover {
+  color: #bf40bf;
+}
+
+/* Copy */
+
+#copy-area {
+  background-color: #F1F1F1;
+
+}
+
+#copy-area .container {
+  padding: 10px 0;
+  text-align: center;
+  
+}
+
+#copy-area .container p {
+  margin-bottom: 0;
+  
+}
+
+#copy-area .container a {
+  font-weight: bold;
+  color: #444;
+  
+}
+
+#copy-area .container a:hover {
+  text-decoration: none;
+  color: #3EC1D5;
+  position: absolute;
+	bottom: 0;
+}
+
+
+@media(max-width: 425px) {
+
+  /* desativar o botão da navbar*/
+  .game{
+    display: none;
+  }
+
+  /*desativar o botão rank*/
+   .rank{
+    visibility: hidden;
+   }
+
+  /* slider */
+  #mainSlider {
+    margin-top: 90px;
+  }
+
+  #mainSlider .carousel-caption {
+    top: 5%;
+  }
+
+  #mainSlider .carousel-caption h2 {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+
+  #mainSlider .carousel-caption p {
+    display: none;
+  }
+
+  .carousel-caption .main-btn {
+    
+    font-size: 14px;
+  }
+
+  /* about */
+  .main-title {
+    font-size: 30px;
+  }
+
+  #about-area img {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
+
+  /* data */
+  .circle-box {
+    width: 50%;
+  }
+
+  #team-area .col-md-3 {
+    width: 50%;
+    margin-bottom: 30px;
+  }
+
+  /* apply */
+  #apply-area {
+    height: auto;
+  }
+
+  #company-img {
+    display: none;
+  }
+
+  /* filter */
+  #portfolio-area .filter-btn {
+    margin-bottom: 20px;
+  }
+
+  .project-box {
+    width: 50%;
+  }
+
+  /* news */
+  #news-area .main-title {
+    font-size: 24px;
+  }
+
+  #news-area p {
+    font-size: 16px;
+  }
+
+  #email-input {
+    width: 80%;
+  }
+
+  #call-area p, #call-area #call-btn {
+    font-size: 14px;
+    letter-spacing: 0;
+  }
+
+  #call-area p, #call-area #call-btn {
+    margin: 0;
+    width: 50%;
+  }
+
+  /* contact */
+  .contact-box {
+    border: none;
+    margin-bottom: 0;
+  }
+
+
+  
+}
+
+@media (max-width: 576px) {  
+  .xs {color:red;font-weight:bold;}
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width:768px) {  
+  .sm {color:red;font-weight:bold;}
+}
+ 
+/* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+@media (min-width: 768px) and (max-width:992px) {  
+ .md {color:red;font-weight:bold;}
+}
+ 
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width:1200px) { 
+ .lg {color:red;font-weight:bold;}
+}
+ 
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  
+    .xl {color:red;font-weight:bold;}
+}
+
+h5.card-title{
+  text-align: center;
+}

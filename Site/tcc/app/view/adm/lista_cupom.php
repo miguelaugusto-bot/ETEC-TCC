@@ -1,11 +1,14 @@
 <?php
-session_start();
-if (isset($_SESSION['sessao']) and isset($_SESSION['email']) and isset($_SESSION['senha'])) {
-} elseif (isset($_SESSION['sessao']) != "1") {
-	session_destroy();
-	header("Location: login.html");
-	exit();
-}
+
+    if (!isset($_SESSION)) session_start(); //saber se há sessão e iniciar
+
+    	$nivel_necessario = "ADM"; //nivel de acesso que pode entrar
+
+	//saber se não é diferente o email e o acesso
+    if (!isset($_SESSION['EMAIL']) OR ($_SESSION['ACESSO'] != $nivel_necessario)) { 
+        session_destroy();
+        header('Location: login.html'); exit;
+    }
 ?>
 
 
@@ -43,7 +46,8 @@ if (isset($_SESSION['sessao']) and isset($_SESSION['email']) and isset($_SESSION
 					</a>Home
 				</h5><br>
 				<a href="gerar.php"><span class="text-white bg-dark">Criar Cupom</span></a><br><br>
-				<a href="lista_cupom.php"><span class="text-white bg-dark">Visualizar Cupom</span></a>
+				<a href="lista_cupom.php"><span class="text-white bg-dark">Visualizar Cupom</span></a><br><br>
+				<a href="./../controllers/php/logout.php"><span class="text-white bg-dark">Logout</span></a>
 			</div>
 		</div>
 

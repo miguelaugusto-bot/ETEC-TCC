@@ -2,7 +2,42 @@
 body {
   font-family: 'Roboto', sans-serif;
 }
+/* carrinho botão */
+div.botoes{
+  display: flex;
+  justify-content: space-between;
+}
 
+.buttons {
+  background-color: #bf40bf; /* Green */
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+a.buttons.carrinho{
+  text-decoration: none;
+}
+a.buttons.carrinho:hover{
+  color: white;
+}
+
+.carrinho {
+  border-radius: 12px;
+}
+
+/*carrinho  */
+textarea{
+  width: 100%;
+  resize: none;
+  
+}
 
 .row {
   margin: 0;
@@ -101,6 +136,7 @@ header, .navbar {
 .carousel-indicators .active {
   background-color: #bf40bf;
 }
+
 
 /* Sobre a empresa */
 

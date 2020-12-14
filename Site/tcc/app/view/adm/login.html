@@ -51,19 +51,19 @@
 					</div>
 				</div>
 				<div class="d-flex justify-content-center form_container">
-					<form action="../../lib/php/crud_cupom/validar.php" method="POST">
+					<form action="../../controllers/php/logar.php" method="POST">
 						<div class="input-group mb-3">
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-user"></i></span>
 							</div>
-							<input autofocus autocomplete="off" type="text" name="email" class="form-control input_user"
+							<input required autofocus autocomplete="off" type="text" name="email" class="form-control input_user"
 								placeholder="email">
 						</div>
 						<div class="input-group mb-2">
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-key"></i></span>
 							</div>
-							<input autocomplete="off" type="password" name="senha" class="form-control input_pass"
+							<input required autocomplete="off" type="password" name="senha" class="form-control input_pass"
 								placeholder="senha">
 						</div>
 						<div class="form-group">
