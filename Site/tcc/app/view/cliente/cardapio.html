@@ -15,6 +15,76 @@
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="../../lib/css/styles.css">
 
+  <style>
+    .flex-container {
+      display: flex;
+      height: 34px;
+      justify-content: center;
+    }
+
+    .button {
+      background-color: #bf40bf;
+      color: black;
+      border: 2px solid #bf40bf;
+      /* Green */
+      -webkit-transition-duration: 0.4s;
+      /* Safari */
+      transition-duration: 0.4s;
+      color: white;
+      outline: thin dotted !important;
+      outline: 0px auto -webkit-focus-ring-color !important;
+      outline-offset: 0px !important;
+    }
+
+    .fixado {
+      border-radius: 20px;
+      position: fixed;
+      left: 5%;
+      top: 90vh;
+      padding: 4px 20px;
+    }
+
+    .button:hover {
+      background-color: #d222d8;
+      color: rgb(255, 255, 255);
+      border: 2px solid #b214b8;
+      /* Green */
+    }
+
+    .button:active {
+      background-color: #ffffff;
+      /* Green */
+      color: #b214b8;
+      border: 2px solid #b214b8;
+    }
+
+    .buttonBorderLeft {
+      border-top-left-radius: 7px;
+      border-bottom-left-radius: 7px;
+    }
+
+    .buttonBorderRight {
+      border-top-right-radius: 7px;
+      border-bottom-right-radius: 7px;
+    }
+
+    .box {
+      background-color: #ffffff;
+      /* Green */
+      color: #b214b8;
+      border-top: 2px solid #b214b8;
+      border-bottom: 2px solid #b214b8;
+      height: 34px;
+      width: 35px;
+
+
+    }
+
+    .p {
+      font-family: "Lucida Console", "Courier New", monospace;
+      font-size: 20px;
+    }
+  </style>
 </head>
 
 <body>
@@ -31,11 +101,19 @@
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
           <div class="navbar-nav">
+
             <a class="nav-item nav-link" id="home-menu" href="../../../index.html">HOME</span></a>
-            <a class="nav-item nav-link" id="apply-menu" href="#">GAME</a>
+
+            <a class="nav-item nav-link" id="apply-menu" href="jogo.php">GAME</a>
+
             <a class="nav-item nav-link" id="portfolio-menu" href="cardapio.html">CARDAPIO</a>
+
+	          <a class="nav-item nav-link"  href="carrinho.html">CARRINHO</a>
+
             <a class="nav-item nav-link" id="about-menu" href="sobre.html">SOBRE</a>
+
             <a class="nav-item nav-link" id="contact-menu" href="contato.html">CONTATO</a>
+
           </div>
         </div>
       </nav>
@@ -50,6 +128,10 @@
         <div class="col-md-12">
           <h3 class="main-title">NOSSOS LANCHES 🍔</h3>
         </div>
+        <div class="card-view">
+
+        </div>
+        
         <div class="col-md-12" id="filter-btn-box">
           <button class="main-btn filter-btn active" id="all-btn">Todos</button>
           <button class="main-btn filter-btn" id="dsg-btn">AÇAI</button>
@@ -64,6 +146,31 @@
             <div class="card-body">
               <h5 class="card-title">Mix para açai</h5>
               <p class="card-text">Chocolate ao leite original ou chocalate branco + 2 frutas de sua preferência</p>
+              <br><br>
+
+              <div class="flex-container">
+                <button class='button buttonBorderLeft' onclick='subtrair("Mix-para-açai")'>
+                  <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-caret-left" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M10 12.796L4.519 8 10 3.204v9.592zm-.659.753l-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z" />
+                  </svg>
+                </button>
+
+                <div class='box'>
+                  <p class='p' id='Mix-para-açai'>0</p>
+                </div>
+
+                <button class='button buttonBorderRight' onclick='adicionar("Mix-para-açai")'>
+                  <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-caret-right-fill" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                  </svg>
+                </button>
+              </div>
+
+
             </div>
           </div>
         </div>
@@ -71,11 +178,32 @@
           <img src="../../lib/img/cardapio/acai/id1.jpg" class="card-img-top" alt="Projeto 2">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Açai 480ml </h5>
+              <h5 class="card-title">Açai 900ml </h5>
               <p class="card-text">Açai 480 ml completo , paçoca , M&M , leite em pó e Banana </p>
               <strong>
                 <p> <i class="fa fa-credit-card" aria-hidden="true"></i> R$ 13,50</p>
               </strong>
+                            <div class="flex-container">
+                <button class='button buttonBorderLeft' onclick='subtrair("Açai-900-ml")'>
+                  <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-caret-left" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M10 12.796L4.519 8 10 3.204v9.592zm-.659.753l-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z" />
+                  </svg>
+                </button>
+
+                <div class='box'>
+                  <p class='p' id='Açai-900-ml'>0</p>
+                </div>
+
+                <button class='button buttonBorderRight' onclick='adicionar("Açai-900-ml")'>
+                  <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-caret-right-fill" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -86,10 +214,30 @@
               <h5 class="card-title">Açai 360ml</h5>
               <p class="card-text">Açai 360ml completo , paçoca ,
                 M&M , leite em pó , Banana e manga </p>
-              <br>
               <strong>
                 <p> <i class="fa fa-credit-card" aria-hidden="true"></i> R$ 10,50</p>
               </strong>
+              <div class="flex-container">
+                <button class='button buttonBorderLeft' onclick='subtrair("Açai-360-ml")'>
+                  <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-caret-left" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M10 12.796L4.519 8 10 3.204v9.592zm-.659.753l-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z" />
+                  </svg>
+                </button>
+
+                <div class='box'>
+                  <p class='p' id='Açai-360-ml'>0</p>
+                </div>
+
+                <button class='button buttonBorderRight' onclick='adicionar("Açai-360-ml")'>
+                  <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-caret-right-fill" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -103,6 +251,27 @@
               <strong>
                 <p> <i class="fa fa-credit-card" aria-hidden="true"></i> R$ 7,50</p>
               </strong>
+              <div class="flex-container">
+                <button class='button buttonBorderLeft' onclick='subtrair("Açai-240-ml")'>
+                  <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-caret-left" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M10 12.796L4.519 8 10 3.204v9.592zm-.659.753l-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z" />
+                  </svg>
+                </button>
+
+                <div class='box'>
+                  <p class='p' id='Açai-240-ml'>0</p>
+                </div>
+
+                <button class='button buttonBorderRight' onclick='adicionar("Açai-240-ml")'>
+                  <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-caret-right-fill" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -116,6 +285,27 @@
               <strong>
                 <p> <i class="fa fa-credit-card" aria-hidden="true"></i> R$ 20,00</p>
               </strong>
+              <div class="flex-container">
+                <button class='button buttonBorderLeft' onclick='subtrair("Açai-700-ml")'>
+                  <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-caret-left" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M10 12.796L4.519 8 10 3.204v9.592zm-.659.753l-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z" />
+                  </svg>
+                </button>
+
+                <div class='box'>
+                  <p class='p' id='Açai-700-ml'>0</p>
+                </div>
+
+                <button class='button buttonBorderRight' onclick='adicionar("Açai-700-ml")'>
+                  <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-caret-right-fill" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -128,6 +318,27 @@
               <strong>
                 <p> <i class="fa fa-credit-card" aria-hidden="true"></i> R$ 13,50</p>
               </strong>
+              <div class="flex-container">
+                <button class='button buttonBorderLeft' onclick='subtrair("Açai-480-ml")'>
+                  <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-caret-left" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M10 12.796L4.519 8 10 3.204v9.592zm-.659.753l-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z" />
+                  </svg>
+                </button>
+
+                <div class='box'>
+                  <p class='p' id='Açai-480-ml'>0</p>
+                </div>
+
+                <button class='button buttonBorderRight' onclick='adicionar("Açai-480-ml")'>
+                  <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-caret-right-fill" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -138,10 +349,31 @@
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">X-Burger</h5>
-              <p class="card-text">Pão brioche , maionese da casa e molho da casa , queijo prato , carne 120G </p>
+              <p class="card-text">Pão brioche , maionese da casa e molho da casa , queijo prato , carne 120G </p><br>
               <strong>
                 <p> <i class="fa fa-credit-card" aria-hidden="true"></i> R$ 13,00</p>
               </strong>
+              <div class="flex-container">
+                <button class='button buttonBorderLeft' onclick='subtrair("X-Burger")'>
+                  <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-caret-left" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M10 12.796L4.519 8 10 3.204v9.592zm-.659.753l-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z" />
+                  </svg>
+                </button>
+
+                <div class='box'>
+                  <p class='p' id='X-Burger'>0</p>
+                </div>
+
+                <button class='button buttonBorderRight' onclick='adicionar("X-Burger")'>
+                  <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-caret-right-fill" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -155,6 +387,27 @@
               <strong>
                 <p> <i class="fa fa-credit-card" aria-hidden="true"></i> R$ 15,00</p>
               </strong>
+              <div class="flex-container">
+                <button class='button buttonBorderLeft' onclick='subtrair("X-Salada")'>
+                  <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-caret-left" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M10 12.796L4.519 8 10 3.204v9.592zm-.659.753l-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z" />
+                  </svg>
+                </button>
+
+                <div class='box'>
+                  <p class='p' id='X-Salada'>0</p>
+                </div>
+
+                <button class='button buttonBorderRight' onclick='adicionar("X-Salada")'>
+                  <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-caret-right-fill" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -169,11 +422,32 @@
               <strong>
                 <p> <i class="fa fa-credit-card" aria-hidden="true"></i> R$ 17,00</p>
               </strong>
+              <div class="flex-container">
+                <button class='button buttonBorderLeft' onclick='subtrair("X-Bacon")'>
+                  <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-caret-left" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M10 12.796L4.519 8 10 3.204v9.592zm-.659.753l-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z" />
+                  </svg>
+                </button>
+
+                <div class='box'>
+                  <p class='p' id='X-Bacon'>0</p>
+                </div>
+
+                <button class='button buttonBorderRight' onclick='adicionar("X-Bacon")'>
+                  <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-caret-right-fill" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         </div>
         <div class="col-md-4 project-box dev">
-          <img src="../../lib/img/cardapio/porcoes/id4.jpg" class="img-fluid" alt="Hamburguer">
+          <img src="../../lib/img/cardapio/hamburguer/id4.jpg" class="img-fluid" alt="Hamburguer">
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">X-Cheddar</h5>
@@ -182,6 +456,27 @@
               <strong>
                 <p> <i class="fa fa-credit-card" aria-hidden="true"></i> R$ 15,00</p>
               </strong>
+              <div class="flex-container">
+                <button class='button buttonBorderLeft' onclick='subtrair("X-Cheddar")'>
+                  <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-caret-left" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M10 12.796L4.519 8 10 3.204v9.592zm-.659.753l-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z" />
+                  </svg>
+                </button>
+
+                <div class='box'>
+                  <p class='p' id='X-Cheddar'>0</p>
+                </div>
+
+                <button class='button buttonBorderRight' onclick='adicionar("X-Cheddar")'>
+                  <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-caret-right-fill" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -195,6 +490,27 @@
               <strong>
                 <p> <i class="fa fa-credit-card" aria-hidden="true"></i> R$ 15,00</p>
               </strong>
+              <div class="flex-container">
+                <button class='button buttonBorderLeft' onclick='subtrair("X-Frango")'>
+                  <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-caret-left" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M10 12.796L4.519 8 10 3.204v9.592zm-.659.753l-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z" />
+                  </svg>
+                </button>
+
+                <div class='box'>
+                  <p class='p' id='X-Frango'>0</p>
+                </div>
+
+                <button class='button buttonBorderRight' onclick='adicionar("X-Frango")'>
+                  <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-caret-right-fill" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                  </svg>
+                </button>
+              </div>
 
             </div>
           </div>
@@ -203,13 +519,34 @@
           <img src="../../lib/img/cardapio/hamburguer/id6.jpg" class="img-fluid" alt="Hamburguer">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Mudar dps</h5>
+              <h5 class="card-title">X-Tudo</h5>
               <p class="card-text">
               <p class="card-text">Pão Brioche , Maionese da casa , molho da casa , chesse tens , queijo prato , alface
                 americana , tomate , carne de frango 100G </p>
               <strong>
                 <p> <i class="fa fa-credit-card" aria-hidden="true"></i> R$ 50,00</p>
               </strong>
+              <div class="flex-container">
+                <button class='button buttonBorderLeft' onclick='subtrair("X-Tudo")'>
+                  <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-caret-left" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M10 12.796L4.519 8 10 3.204v9.592zm-.659.753l-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z" />
+                  </svg>
+                </button>
+
+                <div class='box'>
+                  <p class='p' id='X-Tudo'>0</p>
+                </div>
+
+                <button class='button buttonBorderRight' onclick='adicionar("X-Tudo")'>
+                  <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-caret-right-fill" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -219,13 +556,34 @@
           <img src="../../lib/img/cardapio/porcoes/id1.jpg" class="img-fluid" alt="Projeto 6">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Frango assado & Mandioca </h5>
+              <h5 class="card-title">Frango Assado e Mandioca </h5>
               <p class="card-text">Porção de frango assado e mandioca sequinha , alface americana , limões e
                 acompanhantes</p>
               <br>
               <strong>
                 <p> <i class="fa fa-credit-card" aria-hidden="true"></i> APARTIR DE R$ 19,900</p>
               </strong>
+              <div class="flex-container">
+                <button class='button buttonBorderLeft' onclick='subtrair("Frango-Assado-e-Mandioca")'>
+                  <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-caret-left" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M10 12.796L4.519 8 10 3.204v9.592zm-.659.753l-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z" />
+                  </svg>
+                </button>
+
+                <div class='box'>
+                  <p class='p' id='Frango-Assado-e-Mandioca'>0</p>
+                </div>
+
+                <button class='button buttonBorderRight' onclick='adicionar("Frango-Assado-e-Mandioca")'>
+                  <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-caret-right-fill" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -234,12 +592,33 @@
           <img src="../../lib/img/cardapio/porcoes/id2.jpg" class="img-fluid" alt="Projeto 6">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title"> batata com cheddar e nuggets</h5>
+              <h5 class="card-title">Batata com Cheddar e Nuggets</h5>
               <p class="card-text">Porção de batata com cheddar e bacon , nuggts fritos e crocantes</p>
               <br>
               <strong>
                 <p> <i class="fa fa-credit-card" aria-hidden="true"></i>APARTIR DE R$ 19,90</p>
-              </strong> <br>
+              </strong>
+              <div class="flex-container">
+                <button class='button buttonBorderLeft' onclick='subtrair("Batata-com-Cheddar-e-Nuggets")'>
+                  <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-caret-left" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M10 12.796L4.519 8 10 3.204v9.592zm-.659.753l-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z" />
+                  </svg>
+                </button>
+
+                <div class='box'>
+                  <p class='p' id='Batata-com-Cheddar-e-Nuggets'>0</p>
+                </div>
+
+                <button class='button buttonBorderRight' onclick='adicionar("Batata-com-Cheddar-e-Nuggets")'>
+                  <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-caret-right-fill" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                  </svg>
+                </button>
+              </div> <br>
             </div>
           </div>
         </div>
@@ -248,12 +627,34 @@
           <img src="../../lib/img/cardapio/porcoes/id3.jpg" class="img-fluid" alt="Projeto 6">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Frango à passarinho e batata com cheddar</h5>
+              <h5 class="card-title">Batata com Cheddar e Bacon</h5>
               <p class="card-text">Porção de frango à passarinho , batata com cheddar e bacon , alface americana ,
                 limões e acompanhantes</p>
               <strong>
+
                 <p> <i class="fa fa-credit-card" aria-hidden="true"></i> APARTIR DE R$ 19,90</p>
               </strong>
+              <div class="flex-container">
+                <button class='button buttonBorderLeft' onclick='subtrair("Batata-com-Cheddar-e-Bacon")'>
+                  <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-caret-left" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M10 12.796L4.519 8 10 3.204v9.592zm-.659.753l-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z" />
+                  </svg>
+                </button>
+
+                <div class='box'>
+                  <p class='p' id='Batata-com-Cheddar-e-Bacon'>0</p>
+                </div>
+
+                <button class='button buttonBorderRight' onclick='adicionar("Batata-com-Cheddar-e-Bacon")'>
+                  <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-caret-right-fill" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -262,11 +663,32 @@
           <img src="../../lib/img/cardapio/porcoes/id4.jpg" class="img-fluid" alt="Projeto 6">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Batata com cheddar , cebola empanada e calabresa</h5>
+              <h5 class="card-title">Batata com Cheddar Cebola Empanada e calabresa</h5>
               <p class="card-text">Porção de batata de cheddar e bacon , cebola empanada crocante e calabresa </p>
               <strong>
                 <p> <i class="fa fa-credit-card" aria-hidden="true"></i> APARTIR DE R$ 19,90</p>
               </strong>
+              <div class="flex-container">
+                <button class='button buttonBorderLeft' onclick='subtrair("Batata-com-Cheddar-Cebola-Empanada-e-calabresa")'>
+                  <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-caret-left" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M10 12.796L4.519 8 10 3.204v9.592zm-.659.753l-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z" />
+                  </svg>
+                </button>
+
+                <div class='box'>
+                  <p class='p' id='Batata-com-Cheddar-Cebola-Empanada-e-calabresa'>0</p>
+                </div>
+
+                <button class='button buttonBorderRight' onclick='adicionar("Batata-com-Cheddar-Cebola-Empanada-e-calabresa")'>
+                  <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-caret-right-fill" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -274,11 +696,32 @@
           <img src="../../lib/img/cardapio/porcoes/id5.jpg" class="img-fluid" alt="Projeto 6">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Mandioca e Batata com cheddar</h5>
+              <h5 class="card-title">Frango à Passarinho e Batata com Cheddar</h5>
               <p class="card-text">Porção de batata com cheddar e bacon , Mandioca crocante e sequinha </p>
               <strong>
                 <p> <i class="fa fa-credit-card" aria-hidden="true"></i> APARTIR DE R$ 19,90</p>
               </strong>
+              <div class="flex-container">
+                <button class='button buttonBorderLeft' onclick='subtrair("Frango-à-Passarinho-e-Batata-com-Cheddar")'>
+                  <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-caret-left" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M10 12.796L4.519 8 10 3.204v9.592zm-.659.753l-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z" />
+                  </svg>
+                </button>
+
+                <div class='box'>
+                  <p class='p' id='Frango-à-Passarinho-e-Batata-com-Cheddar'>0</p>
+                </div>
+
+                <button class='button buttonBorderRight' onclick='adicionar("Frango-à-Passarinho-e-Batata-com-Cheddar")'>
+                  <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-caret-right-fill" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -287,28 +730,53 @@
           <img src="../../lib/img/cardapio/porcoes/id6.jpg" class="img-fluid" alt="Projeto 6">
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Frango à passarinho e polenta</h5>
-              <p class="card-text">Porção de frango à passarinho e polenta , alface americana , limões</p>
+              <h5 class="card-title">Frango à Passarinho e Polenta</h5>
+              <p class="card-text">Porção de frango à passarinho e polenta , alface americana , limões</p><br>
               <strong>
                 <p> <i class="fa fa-credit-card" aria-hidden="true"></i> APARTIR DE R$ 19,90</p>
               </strong>
+              <div class="flex-container">
+                <button class='button buttonBorderLeft' onclick='subtrair("Frango-à-Passarinho-e-Polenta")'>
+                  <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-caret-left" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                      d="M10 12.796L4.519 8 10 3.204v9.592zm-.659.753l-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753z" />
+                  </svg>
+                </button>
+
+                <div class='box'>
+                  <p class='p' id='Frango-à-Passarinho-e-Polenta'>0</p>
+                </div>
+
+                <button class='button buttonBorderRight' onclick='adicionar("Frango-à-Passarinho-e-Polenta")'>
+                  <svg width="20px" height="20px" viewBox="0 0 16 16" class="bi bi-caret-right-fill" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M12.14 8.753l-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <button class='button fixado' onclick='submit()'>
+      CARRINHO <i class="fa fa-shopping-cart"></i>
+    </button>
   </div>
   </div>
   </div>
-  <div id="copy-area">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <p>Desenvolvido por <a href="" target="_blank">Squad Flame Pixel Studio</a> &copy; 2020</p>
+  <footer>
+    <div id="copy-area">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <p>Desenvolvido por <b>Squad Flame Pixel Studio</b> &copy; 2020</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
   </footer>
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -318,6 +786,7 @@
     crossorigin="anonymous"></script>
   <!-- Scripts do projeto -->
   <script src="../../lib/js/scripts.js"></script>
+  <script src="../../lib/js/função_botão.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>

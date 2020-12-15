@@ -4,6 +4,56 @@ body {
 }
 
 
+/* carrinho bot�o */
+div.botoes{
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttons {
+  background-color: #bf40bf; /* Green */
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+a.buttons.carrinho{
+  text-decoration: none;
+}
+a.buttons.carrinho:hover{
+  color: white;
+}
+
+.carrinho {
+  border-radius: 12px;
+}
+
+/*carrinho  */
+textarea{
+  width: 100%;
+  resize: none;
+  
+}
+
+.footer{
+  position:absolute;
+  bottom:0;
+  width:100%;
+}
+
+footer{
+  position:absolute;
+  position:relative;
+  bottom:0;
+  width:100%;
+}
+
 .row {
   margin: 0;
 }
@@ -353,9 +403,18 @@ header, .navbar {
 }
 
 /* responsive */
-@media(max-width: 768px) {
-	
+@media(max-width: 960px) {
   
+  /* desativar o botão da navbar*/
+  .game{
+    display: none;
+  }
+
+  /*desativar o botão rank*/
+   .rank{
+    visibility: hidden;
+   }
+
   /* geral */
   .container {
     padding: 20px 0;
@@ -438,6 +497,16 @@ header, .navbar {
 
 
 @media(max-width: 425px) {
+
+  /* desativar o botão da navbar*/
+  .game{
+    display: none;
+  }
+
+  /*desativar o botão rank*/
+   .rank{
+    visibility: hidden;
+   }
 
   /* slider */
   #mainSlider {
@@ -529,9 +598,16 @@ header, .navbar {
     margin-bottom: 0;
   }
 
-
- 
-
-
 }
 
+button:active {
+  outline: thin dotted !important;
+
+  outline: 0px auto -webkit-focus-ring-color !important;
+
+  outline-offset: 0px !important;
+}
+
+/*main{
+  margin-top: 5.5rem;
+}

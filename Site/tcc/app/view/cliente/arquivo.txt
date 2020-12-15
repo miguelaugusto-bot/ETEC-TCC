@@ -1,0 +1,53 @@
+<br><br><br><br>
+  <div id="portfolio-area">
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col-md-12">
+          <h3 class="main-title">CARRINHO 🍔</h3>
+        </div>
+
+        <!--AÇAI-->
+        <div class="col-md-4 project-box dsg">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Acai</h5>
+              <p class="card-text"><textarea id="w3review" name="w3review" rows="4">
+                </textarea></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 project-box dsg">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Hamburguer</h5>
+              <p class="card-text"><textarea id="w3review" name="w3review" rows="4">
+                </textarea></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 project-box dsg">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">Porcoes</h5>
+              <p class="card-text"><textarea id="w3review" name="w3review" rows="4">
+                </textarea></p>
+            </div>
+          </div>
+        </div>
+        <div class="w-100"></div>
+          <div class="col-md-4 project-box dsg">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Informações</h5>
+                <p class="card-text">
+                  <label for="fname">Nome: </label>
+                  <input type="text" id="fname" name="fname"><br><br>
+                  <label for="lname">Endereço </label>
+                  <input type="text" id="lname" name="lname"><br><br>
+                </p>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
