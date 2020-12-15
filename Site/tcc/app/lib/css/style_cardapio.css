@@ -253,3 +253,20 @@ header, .navbar {
 h5.card-title{
   text-align: center;
 }
+h3{
+  text-align: center;
+  margin: 0 0 65px 0;
+  color: #444;
+  font-size: 40px;
+}
+.main-title::after{
+  content: "";
+  border-top: 2px solid #333;
+  width: 15%;
+  position: absolute;
+  top: 60px;
+  left: 42.5;
+}
+p{
+  text-align: center;
+}

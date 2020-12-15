@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %}
+Visualizar
+{% endblock %}
+{% block content %}
+<div class="main">
+    <h3 class="CentralizarTexto"> Visualizar Cupons</h3>
+    <table id="customers">
+        <tr>
+            <th>Cupom</th>
+            <th>valor</th>
+            <th>Data de Criação</th>
+            <th>Data de Expiração</th>
+            <th>Apagar</th>
+        </tr>
+        {% for cupons in cupons %}
+        <tr>
+            <td>{{ cupons.cupom }}</td>
+            <td>{{ cupons.valor }}</td>
+            <td>{{ cupons.dataCriacao.day }}/{{ cupons.dataCriacao.month }}/{{ cupons.dataCriacao.year }}</td>
+            <td>{{ cupons.dataExpiracao.day }}/{{ cupons.dataExpiracao.month }}/{{ cupons.dataExpiracao.year }}</td>
+            <td>
+                <a href="delete/{{ cupons.id }}">
+                    <button class="btn btn-danger">Apagar</button>
+                </a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+
+{% endblock %}

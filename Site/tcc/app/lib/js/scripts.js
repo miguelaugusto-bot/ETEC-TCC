@@ -11,11 +11,11 @@ $( document ).ready(function() {
 
     let scroll = $(window).scrollTop();
 
-    //if(scroll > (dataAreaOffset.top - 500) && stop == 0) {
+    if(scroll > (dataAreaOffset.top - 500) && stop == 0) {
      
 
-      //stop = 1;
-    //}
+      stop = 1;
+    }
 
   });
 
@@ -23,6 +23,7 @@ $( document ).ready(function() {
 
   // setTimeout serve para carregar primeiro as imagens
   setTimeout(function() {
+    $('#data-area').parallax({imageSrc: 'img/cidadeparallax.png'});
     $('#apply-area').parallax({imageSrc: 'app/lib/img/game/pattern.png'});
   }, 200);
 
@@ -64,7 +65,7 @@ $( document ).ready(function() {
   }
 
   // scroll para as seções
-/*
+
   let navBtn = $('.nav-item');
 
   let bannerSection = $('#mainSlider');
@@ -101,5 +102,5 @@ $( document ).ready(function() {
         scrollTop: $(scrollTo).offset().top - 70
     }, 1500);
   });
-*/
+
 });

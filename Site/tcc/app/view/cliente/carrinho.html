@@ -1,136 +1,155 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
+
 
 <head>
 
+
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+
   <link rel="shortcut icon" href="../../lib/img/favicon/favicon.ico" />
 
+
+
   <title>CORY</title>
+
   <!-- Fonte -->
+
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+
   <!-- Estilos -->
+
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
     integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
   <link rel="stylesheet" href="../../lib/css/styles.css">
+
+
 
 </head>
 
+
+
 <body>
+
   <header>
+
     <div class="container" id="nav-container">
+
       <!-- add essa class -->
+
       <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+
         <a class="navbar-brand" href="../../../index.html">
+
           <img id="logo" src="../../lib/img/logo/cory.png" alt="Cory Delivery">
+
         </a>
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links"
           aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
+
           <span class="navbar-toggler-icon"></span>
+
         </button>
+
         <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
+
           <div class="navbar-nav">
-            <a class="nav-item nav-link"  href="../../../index.html">HOME</span></a>
-            <a class="nav-item nav-link game"  href="#">GAME</a>
-            <a class="nav-item nav-link"  href="cardapio.html">CARDAPIO</a>
-            <a class="nav-item nav-link"  href="carrinho.html">CARRINHO</a>
-            <a class="nav-item nav-link"  href="sobre.html">SOBRE</a>
-            <a class="nav-item nav-link"  href="contato.html">CONTATO</a>
+
+            <a class="nav-item nav-link" id="home-menu" href="../../../index.html">HOME</span></a>
+
+            <a class="nav-item nav-link" id="apply-menu" href="jogo.php">GAME</a>
+
+            <a class="nav-item nav-link" id="portfolio-menu" href="cardapio.html">CARDAPIO</a>
+
+	          <a class="nav-item nav-link"  href="carrinho.html">CARRINHO</a>
+
+            <a class="nav-item nav-link" id="about-menu" href="sobre.html">SOBRE</a>
+
+            <a class="nav-item nav-link" id="contact-menu" href="contato.html">CONTATO</a>
+
           </div>
+
         </div>
+
       </nav>
+
     </div>
+
   </header>
 
-  <!-- Carrinho de Pedidos -->
-  <br><br><br><br>
-  <div id="portfolio-area">
-    <div class="container">
-      <div class="row justify-content-md-center">
-        <div class="col-md-12">
-          <h3 class="main-title">CARRINHO 🍔</h3>
-        </div>
 
-        <div class="col-md-4 project-box dsg">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Acai</h5>
-              <p class="card-text"><textarea id="w3review" name="w3review" rows="4">
-                </textarea></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 project-box dsg">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Hamburguer</h5>
-              <p class="card-text"><textarea id="w3review" name="w3review" rows="4">
-                </textarea></p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4 project-box dsg">
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">Porcoes</h5>
-              <p class="card-text"><textarea id="w3review" name="w3review" rows="4">
-                </textarea></p>
-            </div>
-          </div>
-        </div>
-        <div class="w-100"></div>
-          <div class="col-md-4 project-box dsg">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Informações</h5>
-                <p class="card-text">
-                  <label for="fname">Nome: </label>
-                  <input type="text" id="fname" name="fname"><br><br>
-                  <label for="lname">Endereço </label>
-                  <input type="text" id="lname" name="lname"><br><br>
-                </p>
-              </div>
-            </div>
-          </div>
+
+  <!-- Carrinho de Pedidos -->
+
+  <!-- Carrinho de Pedidos -->
+
+  <br><br><br><br>
+  <main>
+
+    <div id="portfolio-area">
+
+      <div class="container"></div>
+
+      <div class="col-md-12">
+
+        <h3 class="main-title">CARRINHO 🛒</h3>
+
       </div>
-      <div class="container">
-        <div class="botoes">
-          <a href="cardapio.html" class="buttons carrinho" type="submit">Voltar e Adicionar</a>
-          <input class="buttons carrinho" type="submit" value="Pedir">
-        </div>
-      </div>
+
+      <center id="div">
+
+        <h1>Vá para o cardapio para montar o seu carrinho.</h1>
+
+      </center>
+
     </div>
-  </div>
-<footer>
-  <div id="copy-area">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <p>Desenvolvido por <b>Squad Flame Pixel Studio</b> &copy; 2020</p>
-        </div>
-      </div>
+
     </div>
-  </div>
-  </footer>
+
+    </div>
+  </main>
+
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
     integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
     crossorigin="anonymous"></script>
+
   <!-- Scripts do projeto -->
+
   <script src="../../lib/js/scripts.js"></script>
+
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
+
+  <script src="../../lib/js/carrinho_funcoes.js"></script>
+
   <!-- Font Awesome -->
+
   <script src="https://kit.fontawesome.com/bf7e05c402.js" crossorigin="anonymous"></script>
+
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
+
+
   <!-- Parallax -->
+
   <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
 
+
+
 </body>
+
+
 
 </html>

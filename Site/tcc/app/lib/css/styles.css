@@ -2,7 +2,9 @@
 body {
   font-family: 'Roboto', sans-serif;
 }
-/* carrinho botão */
+
+
+/* carrinho bot�o */
 div.botoes{
   display: flex;
   justify-content: space-between;
@@ -37,6 +39,19 @@ textarea{
   width: 100%;
   resize: none;
   
+}
+
+.footer{
+  position:absolute;
+  bottom:0;
+  width:100%;
+}
+
+footer{
+  position:absolute;
+  position:relative;
+  bottom:0;
+  width:100%;
 }
 
 .row {
@@ -136,7 +151,6 @@ header, .navbar {
 .carousel-indicators .active {
   background-color: #bf40bf;
 }
-
 
 /* Sobre a empresa */
 
@@ -586,3 +600,14 @@ header, .navbar {
 
 }
 
+button:active {
+  outline: thin dotted !important;
+
+  outline: 0px auto -webkit-focus-ring-color !important;
+
+  outline-offset: 0px !important;
+}
+
+/*main{
+  margin-top: 5.5rem;
+}
